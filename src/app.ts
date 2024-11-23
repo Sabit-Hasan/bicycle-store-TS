@@ -11,4 +11,9 @@ app.use(express.json());
 app.use('/api/products', bicycleRoute); // bicycle route
 app.use('/api/orders', orderRoute); // order route
 
+// testing
+app.get('/', (req, res) => {
+    res.send('Bicycle Store API');
+});
+
 export default app;
