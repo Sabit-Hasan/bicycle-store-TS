@@ -12,4 +12,8 @@ app.use(express_1.default.json());
 // routes
 app.use('/api/products', bicycle_route_1.default); // bicycle route
 app.use('/api/orders', order_router_1.default); // order route
+// testing
+app.get('/', (req, res) => {
+    res.send('Bicycle Store API');
+});
 exports.default = app;
