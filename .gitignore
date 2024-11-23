@@ -1,0 +1,16 @@
+node_modules/
+package-lock.json
+dist/
+build/
+.idea/
+.vscode/
+.DS_Store
+logs/
+*.log
+tmp/
+*.tmp
+.env
+.env.example
+coverage/
+*.coverage
+.vercel
