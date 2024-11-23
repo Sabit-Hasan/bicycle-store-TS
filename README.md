@@ -11,7 +11,6 @@
   - [Orders](#orders)
   - [Revenue](#revenue)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 This is a RESTful API for a bicycle store, built using Node.js, Express, and MongoDB. The API provides endpoints for managing bicycles, orders, and revenue.
@@ -31,7 +30,7 @@ This is a RESTful API for a bicycle store, built using Node.js, Express, and Mon
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/bicycle-store-api.git
+    git clone https://github.com/Sabit-Hasan/bicycle-store-TS.git
     ```
 
 2. Install dependencies:
@@ -43,7 +42,7 @@ This is a RESTful API for a bicycle store, built using Node.js, Express, and Mon
 3. Start the server:
 
     ```bash
-    npm start
+    npm start:dev
     ```
 
 ## Usage
@@ -56,61 +55,42 @@ This is a RESTful API for a bicycle store, built using Node.js, Express, and Mon
 
 - **GET /bicycles**: Retrieve a list of all bicycles.
     ```bash
-    curl -X GET http://localhost:3000/bicycles
+    GET http://localhost:3000/api/products
     ```
 
 - **GET /bicycles/:id**: Retrieve a single bicycle by ID.
     ```bash
-    curl -X GET http://localhost:3000/bicycles/<bicycle-id>
+    GET http://localhost:3000/api/products/<bicycle-id>
     ```
 
 - **POST /bicycles**: Create a new bicycle.
     ```bash
-    curl -X POST http://localhost:3000/bicycles -d '{"name": "Mountain Bike", "brand": "BrandName", "price": 500, "type": "Mountain", "description": "Description of the bike", "quantity": 10, "inStock": true}'
+    POST http://localhost:3000/api/products/create-bicycle
     ```
 
 - **PUT /bicycles/:id**: Update a single bicycle by ID.
     ```bash
-    curl -X PUT http://localhost:3000/bicycles/<bicycle-id> -d '{"name": "Updated Bike", "price": 550}'
+    PUT http://localhost:3000/api/products/<bicycle-id> 
     ```
 
 - **DELETE /bicycles/:id**: Delete a single bicycle by ID.
     ```bash
-    curl -X DELETE http://localhost:3000/bicycles/<bicycle-id>
+    DELETE http://localhost:3000/api/products/<bicycle-id> 
     ```
 
 ### Orders
 
-- **GET /orders**: Retrieve a list of all orders.
-    ```bash
-    curl -X GET http://localhost:3000/orders
-    ```
-
-- **GET /orders/:id**: Retrieve a single order by ID.
-    ```bash
-    curl -X GET http://localhost:3000/orders/<order-id>
-    ```
-
 - **POST /orders**: Create a new order.
     ```bash
-    curl -X POST http://localhost:3000/orders -d '{"email": "customer@example.com", "product": "648a45e5f0123c45678d9012", "quantity": 2, "totalPrice": 600}'
-    ```
-
-- **PUT /orders/:id**: Update a single order by ID.
-    ```bash
-    curl -X PUT http://localhost:3000/orders/<order-id> -d '{"quantity": 3}'
-    ```
-
-- **DELETE /orders/:id**: Delete a single order by ID.
-    ```bash
-    curl -X DELETE http://localhost:3000/orders/<order-id>
+    POST http://localhost:3000/api/orders/create-order
+    '{"email": "customer@example.com", "product": "648a45e5f0123c45678d9012", "quantity": 2, "totalPrice": 600}'
     ```
 
 ### Revenue
 
 - **GET /revenue**: Calculate the total revenue.
     ```bash
-    curl -X GET http://localhost:3000/revenue
+    GET http://localhost:3000/api/orders/revenue
     ```
 
 ## Contributing
